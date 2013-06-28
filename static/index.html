@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <title>Deteccion Facial Web: Node.js, Socket.IO, OpenCV &amp; HTML5 (Canvas + WebRTC)</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.2.2/css/foundation.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Offside|Merienda' rel='stylesheet' type='text/css'>
+  <meta charset=utf-8>
+  <style type="text/css">
+    body {
+      font-family: "Merienda";
+      background-color: white;
+    }
+    button {
+      font-family: "Offside";
+    }
+    #debug {
+      background: #303030;
+      border-radius: 10px;
+      color: white;
+      font-family: "Offside";
+      font-size: 22px;
+      display: none;
+      padding: 10px;
+      overflow-x: none;
+      overflow-y: auto;
+      height: 200px;
+      word-wrap: break-word;
+    }
+    .footer {
+      height: 128px;
+      color: black;
+    }
+    header {
+      background-color: #2ba6cb;
+      color: white;
+      box-shadow: 0px 2px 2px #004080;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    h1, h2, h3, h4, h5 {
+      color: #2ba6cb;
+      font-family: "Offside";
+    }
+    header h1, header h2, header h3, header h4, header h5 {
+      color: white;
+      font-family: "Offside";
+      text-shadow: 0px, 5px, 10px black;
+    }
+    #live {
+      display: none;
+    }
+    canvas {
+      padding: 5px;
+      border: solid 5px #2ba6cb;
+      // background-color: #2ba6cb;
+      border-radius: 10px;
+      box-shadow: 0px, 5px, 10px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">    
+    <header>
+      <div class="row">      
+        <div class="large-8 columns">
+          <h1>Detección Facial Web</h1>
+          <h5>Node.js, Socket.IO, OpenCV &amp; HTML5 (Canvas + WebRTC)</h5>
+          <strong>XenoMuta (arroba) gmail.com</strong>
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <div class="large-5 columns">
+        <video id="live" width="320" height="240" autoplay></video>
+        <canvas id="canvas" width="320" height="240"></canvas>
+        <br>
+      </div>
+      <div class="large-7 columns">
+        <h5>Rostros Detectados:</h5>
+        <div id="carasActuales"></div>
+        <br>
+        <button id="debugBtn" class="round success">Iniciar Debug</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <pre id="debug">
+      </pre>      
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row">      
+      <div class="large-12 columns">
+        <img width="200" src="/nodejs.png" title="Probado con ultimas versiones">
+        <img width="200" src="/payola.png" title="Probado con ultimas versiones">
+        <a href="http://www.w3.org/html/logo/">
+          <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-semantics.png" width="293" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, and Semantics">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/caraweb.js"></script>
+</body>
+</html>
