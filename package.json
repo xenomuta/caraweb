@@ -1,12 +1,36 @@
 {
-  "name": "webface",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "caraweb",
+  "version": "0.0.1",
+  "description": "Face Detection With HTML5's WebSockets, WebRTC's getUserMedia() and OpenCV on Node.js",
+  "main": "main.js",
+  "dependencies": {
+    "async": "~0.2.9",
+    "coffee-trace": "~1.3.4",
+    "opencv": "~0.3.1",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xenomuta/caraweb"
+  },
+  "keywords": [
+    "OpenCV",
+    "Face",
+    "Detection",
+    "Machine",
+    "Vision",
+    "WebRTC",
+    "WebSockets",
+    "HTML5"
+  ],
+  "author": "Rilke Petrosky Ulloa <xenomuta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xenomuta/caraweb/issues"
+  },
+  "homepage": "https://github.com/xenomuta/caraweb"
 }
