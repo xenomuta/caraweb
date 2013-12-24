@@ -32,7 +32,7 @@
       }
     }
 
-    var socket = io.connect('http://localhost');
+    var socket = io.connect(top.location.origin); // 'http://localhost');
     socket.on('caras', function (_caras) {
       // console.log(_caras)
       if (!_caras || _caras.length === 0) {
